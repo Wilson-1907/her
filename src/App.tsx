@@ -39,7 +39,7 @@ function App() {
         <section className="celebration-layout" aria-live="polite">
           <div className="photo-card final-photo">
             <img src={defaultPhoto} alt="Purity Mumo" />
-            <div className="photo-caption">Her smile, my favorite view, What I look when I wake up.</div>
+            <div className="photo-caption">Her smile, my favorite person💖.</div>
             <div className="photo-glow" />
           </div>
 
