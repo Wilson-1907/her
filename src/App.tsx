@@ -59,7 +59,7 @@ function App() {
             <p className="eyebrow">Respectfully compiled from the heart</p>
             <h1>Purity Mumo, I love you</h1>
             <p className="love-note">
-              I know you are not ready for dating, and I respect that. This is just my little program saying you are special to me, and I love you with patience, care, and zero pressure. Can't ait to start building more for you. 💖😘💋
+              I know you are not ready for dating, and I respect that. This is just my little program saying you are special to me, and I love you with patience, care, and zero pressure. Can't wait to start building more for you. 💖😘💋
             </p>
 
             <div className="code-note">
