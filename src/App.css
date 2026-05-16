@@ -1,0 +1,449 @@
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.question-page {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 224, 138, 0.2), transparent 30rem),
+    radial-gradient(circle at 82% 8%, rgba(255, 122, 167, 0.18), transparent 28rem),
+    linear-gradient(135deg, #10191c 0%, #31101f 52%, #160d18 100%);
+}
+
+.question-page::before,
+.celebration-page::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.84), transparent);
+}
+
+.proposal-layout {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.proposal-panel,
+.celebration-card,
+.photo-card,
+.mini-terminal {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: #fffdf9;
+  background: rgba(19, 31, 38, 0.66);
+  box-shadow: 0 28px 90px rgba(3, 8, 15, 0.42);
+  backdrop-filter: blur(18px);
+}
+
+.proposal-panel,
+.celebration-card {
+  padding: clamp(26px, 5vw, 56px);
+  text-align: left;
+}
+
+.photo-card {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-card::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(to top, rgba(9, 18, 22, 0.72), transparent 56%);
+}
+
+.photo-caption {
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #fffdf9;
+  background: rgba(9, 18, 22, 0.58);
+  font-weight: 900;
+}
+
+.sparkle-badge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: #172126;
+  background: #8df2e5;
+  font-weight: 900;
+}
+
+.sparkle-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.reason-grid span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  border: 1px solid rgba(141, 242, 229, 0.26);
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: #ffe8f0;
+  background: rgba(255, 122, 167, 0.12);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(44px, 8vw, 86px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.proposal-panel p,
+.love-note {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: #ffe8f0;
+  font-size: clamp(18px, 2.5vw, 22px);
+  line-height: 1.45;
+}
+
+.reason-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.love-grid span {
+  border-color: rgba(255, 224, 138, 0.34);
+  color: #fffdf9;
+  background: rgba(255, 122, 167, 0.18);
+}
+
+.reason-grid svg {
+  width: 17px;
+  height: 17px;
+  color: #ff7aa7;
+}
+
+.button-stage {
+  position: relative;
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.yes-button,
+.no-button {
+  width: 132px;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.yes-button {
+  color: #fff;
+  background: linear-gradient(135deg, #e72370, #ff7aa7);
+  box-shadow: 0 18px 38px rgba(231, 35, 112, 0.34);
+}
+
+.yes-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(231, 35, 112, 0.44);
+}
+
+.no-button {
+  color: #172126;
+  background: #fff6df;
+  box-shadow: 0 14px 34px rgba(255, 246, 223, 0.2);
+}
+
+.no-button.is-floating {
+  position: fixed;
+  z-index: 5;
+  transition:
+    top 220ms ease,
+    left 220ms ease,
+    transform 180ms ease;
+}
+
+.no-button:hover,
+.no-button:focus-visible {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.yes-button svg,
+.no-button svg {
+  width: 21px;
+  height: 21px;
+}
+
+.hint {
+  min-height: 28px;
+  margin-top: 10px;
+  color: #ffd6e5;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.mini-terminal {
+  grid-column: 1 / -1;
+  padding: 18px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+  background: rgba(44, 12, 30, 0.54);
+}
+
+.mini-terminal div {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.mini-terminal span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ff7aa7;
+}
+
+.mini-terminal span:nth-child(2) {
+  background: #ffe08a;
+}
+
+.mini-terminal span:nth-child(3) {
+  background: #8df2e5;
+}
+
+.mini-terminal p,
+.mini-terminal strong {
+  display: block;
+  margin: 0;
+}
+
+.mini-terminal p {
+  color: #ffe08a;
+}
+
+.mini-terminal strong {
+  margin-top: 8px;
+  color: #fffdf9;
+}
+
+.celebration-page {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 22% 12%, rgba(255, 224, 138, 0.2), transparent 30rem),
+    radial-gradient(circle at 78% 18%, rgba(141, 242, 229, 0.14), transparent 28rem),
+    linear-gradient(135deg, #071f22 0%, #351020 58%, #140b17 100%);
+}
+
+.celebration-layout {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.celebration-card {
+  background: rgba(12, 44, 44, 0.68);
+}
+
+.final-photo {
+  min-height: 560px;
+}
+
+.photo-glow {
+  position: absolute;
+  inset: auto 12% 8% 12%;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 122, 167, 0.38);
+  filter: blur(38px);
+}
+
+.emoji-cloud,
+.kiss-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.emoji-cloud {
+  margin-bottom: 18px;
+  font-size: clamp(30px, 6vw, 56px);
+}
+
+.emoji-cloud span {
+  animation: float 2.8s ease-in-out infinite;
+}
+
+.emoji-cloud span:nth-child(even) {
+  animation-delay: 220ms;
+}
+
+.big-heart {
+  width: 98px;
+  height: 98px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  color: #ff4f83;
+  background: #fff8ef;
+  box-shadow: 0 20px 52px rgba(255, 79, 131, 0.36);
+  animation: heartbeat 1.45s ease-in-out infinite;
+}
+
+.big-heart svg {
+  width: 52px;
+  height: 52px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #ffe08a;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.code-note {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  border: 1px solid rgba(141, 242, 229, 0.26);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #c9fff8;
+  background: rgba(0, 0, 0, 0.2);
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+}
+
+.code-note svg {
+  width: 18px;
+  height: 18px;
+}
+
+.kiss-row {
+  margin-top: 28px;
+  font-size: clamp(30px, 6vw, 52px);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.08);
+  }
+  46% {
+    transform: scale(0.96);
+  }
+  62% {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 880px) {
+  .proposal-layout,
+  .celebration-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card,
+  .final-photo {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 16px;
+  }
+
+  .proposal-panel,
+  .celebration-card {
+    padding: 24px;
+  }
+
+  .button-stage {
+    min-height: 156px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .yes-button,
+  .no-button {
+    width: 100%;
+  }
+
+  .no-button {
+    order: 2;
+  }
+
+  .emoji-cloud,
+  .kiss-row {
+    justify-content: center;
+  }
+}
