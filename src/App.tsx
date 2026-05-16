@@ -39,7 +39,7 @@ function App() {
         <section className="celebration-layout" aria-live="polite">
           <div className="photo-card final-photo">
             <img src={defaultPhoto} alt="Purity Mumo" />
-            <div className="photo-caption">Her smile, my favorite view.</div>
+            <div className="photo-caption">Her smile, my favorite view, What I look when I wake up.</div>
             <div className="photo-glow" />
           </div>
 
@@ -59,7 +59,7 @@ function App() {
             <p className="eyebrow">Respectfully compiled from the heart</p>
             <h1>Purity Mumo, I love you</h1>
             <p className="love-note">
-              I know you are not ready for dating, and I respect that. This is just my honest little lover-boy program saying you are special to me, and I love you with patience, care, and zero pressure. 💖😘💋
+              I know you are not ready for dating, and I respect that. This is just my little program saying you are special to me, and I love you with patience, care, and zero pressure. 💖😘💋
             </p>
 
             <div className="code-note">
@@ -85,7 +85,7 @@ function App() {
       <section className="proposal-layout">
         <div className="photo-card">
           <img src={defaultPhoto} alt="Purity Mumo" />
-          <div className="photo-caption">Her smile, my favorite view.</div>
+          <div className="photo-caption">What I love seeing every Morning🥰.</div>
         </div>
 
         <div className="proposal-panel">
@@ -94,7 +94,7 @@ function App() {
             For Purity Mumo
           </div>
 
-          <h1>Purity Mumo, can I keep loving you gently?</h1>
+          <h1>Purity, can I keep loving you ?</h1>
           <p>
             I made this for your smile, your softness, and the way you stay in my heart even when I try to act normal.
           </p>
@@ -138,8 +138,8 @@ function App() {
             <span />
             <span />
           </div>
-          <p>$ run lover-boy --person "Purity Mumo"</p>
-          <strong>I am not asking for pressure. I am just saying my heart chose you.</strong>
+          <p>$ python run my_heart (Purity Mumo)</p>
+          <strong>I am not asking for pressure. I am just saying my heart and my mind chose you.</strong>
         </div>
       </section>
     </main>
